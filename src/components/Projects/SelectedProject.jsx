@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { ProjectsContext } from '../store/projects-context.jsx';
-import Tasks from "./Tasks";
+import { ProjectsContext } from '../../store/projects-context.jsx';
+import Tasks from "../Tasks/Tasks.jsx";
 
 export default function SelectedProject() {
     const projectsCtx = useContext(ProjectsContext);

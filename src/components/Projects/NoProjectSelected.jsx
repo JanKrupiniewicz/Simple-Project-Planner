@@ -1,7 +1,7 @@
 import { useContext } from 'react';
-import { ProjectsContext } from '../store/projects-context';
-import noProjectImage from '../assets/no-projects.png';
-import Button from './Button';
+import { ProjectsContext } from '../../store/projects-context';
+import noProjectImage from '../../assets/no-projects.png';
+import Button from '../Button';
 
 export default function NoProjectSelected() {
     const projectsCtx = useContext(ProjectsContext);

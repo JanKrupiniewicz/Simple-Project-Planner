@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import Modal from "./Modal";
+import Modal from "../Modal";
 
 export default function NewTask({ onAdd }) {
     const modal = useRef();

@@ -1,7 +1,7 @@
 import { useRef, useContext } from "react";
-import { ProjectsContext } from "../store/projects-context";
-import Input from "./Input";
-import Modal from "./Modal";
+import { ProjectsContext } from "../../store/projects-context";
+import Input from "../Input";
+import Modal from "../Modal";
 
 export default function NewProject() {
     const projectsCtx = useContext(ProjectsContext);

@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import ProjectsSidebar from "./components/ProjectsSidebar";
-import NewProject from "./components/NewProject";
-import NoProjectSelected from "./components/NoProjectSelected";
-import SelectedProject from "./components/SelectedProject";
+import ProjectsSidebar from "./components/Projects/ProjectsSidebar.jsx";
+import NewProject from "./components/Projects/NewProject.jsx";
+import NoProjectSelected from "./components/Projects/NoProjectSelected.jsx";
+import SelectedProject from "./components/Projects/SelectedProject.jsx";
 import ProjectsProvider from "./store/projects-context.jsx";
 import { ProjectsContext } from './store/projects-context.jsx';
 
@@ -16,7 +16,7 @@ function AppContent() {
   }
 
   return (
-      <main className="h-screen my-8 flex gap-8">
+      <main className="h-screen flex gap-8">
           <ProjectsSidebar />
           {content}
       </main>
