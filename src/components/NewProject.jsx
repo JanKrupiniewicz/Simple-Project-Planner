@@ -1,8 +1,10 @@
-import { useRef } from "react";
+import { useRef, useContext } from "react";
+import { ProjectsContext } from "../store/projects-context";
 import Input from "./Input";
 import Modal from "./Modal";
 
-export default function NewProject({onAdd, handleCancle}) {
+export default function NewProject() {
+    const projectsCtx = useContext(ProjectsContext);
     const modal = useRef();
     const title = useRef();
     const description = useRef();
@@ -18,7 +20,7 @@ export default function NewProject({onAdd, handleCancle}) {
             return;
         }
 
-        onAdd({
+        projectsCtx.addProject({
             title: enteredTitle,
             description: enteredDesc,
             dueDate: enteredDueDate
@@ -37,7 +39,7 @@ export default function NewProject({onAdd, handleCancle}) {
                     <li>
                         <button 
                             className="text-stone-800 hover:text-stone-950"
-                            onClick={handleCancle}
+                            onClick={projectsCtx.cancelAddProject}
                         >
                             Cancel
                         </button>
